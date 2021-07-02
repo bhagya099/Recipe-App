@@ -9,7 +9,9 @@ html {
 }
 
 body {
-    background-color: rgba(247, 252, 255, 0.899);
+    /* background-color: rgba(247, 252, 255, 0.899); */
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 header {
@@ -42,6 +44,49 @@ header>button {
 header>button:hover {
     background-color: rgba(12, 51, 177, 0.515);
     transform: scale(0.9);
+}
+
+main {
+    display: grid;
+    grid-area: "form form form" "card1 card2 card3";
+}
+
+.form-section {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid rgb(233, 211, 211);
+}
+
+label {
+    color: rgba(12, 51, 177, 0.515);
+    font-size: 1rem;
+    display: block;
+    margin-top: 5px;
+}
+
+input,
+textarea {
+    width: 90%;
+    height: 3rem;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 10px 10px;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border: 1px solid rgb(181, 34, 181);
+}
+
+.form-section>#img {
+    height: 2rem;
 }
 
 @media only screen and (max-width: 699px),
