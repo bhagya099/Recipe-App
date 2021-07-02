@@ -1,3 +1,57 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background-color: antiquewhite;
+    background-color: rgba(247, 252, 255, 0.899);
+}
+
+header {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: rgb(43, 42, 42);
+    transition: all 0.3s ease;
+}
+
+header h1>span {
+    color: rgb(26, 101, 170);
+}
+
+header h1>span:hover {
+    transform: rotate(10deg);
+}
+
+header>button {
+    padding: 12px;
+    margin: 10px 20px;
+    border: 1px;
+    border-radius: 10px;
+    outline: none;
+    background-color: rgba(155, 160, 163, 0.515);
+}
+
+header>button:hover {
+    background-color: rgba(12, 51, 177, 0.515);
+    transform: scale(0.9);
+}
+
+@media only screen and (max-width: 699px),
+(max-width: 1151px) {
+    body {
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100vh;
+    }
+    header h1 {
+        text-align: center;
+    }
 }
