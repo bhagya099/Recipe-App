@@ -5,37 +5,52 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./main.css">
-    <script src="./main.js" defer></script>
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/main.js" defer></script>
     <title>Recipe-APP</title>
 </head>
 
 <body>
     <header>
         <h1>Share your <span>Recipe</span> with others</h1>
-        <button>Add Recipe</button>
     </header>
     <main>
         <section class="form-section">
             <label for="recipe_name">Recipe Name </label>
             <input type="text" id="recipe_name" name="RecipeName">
-            <label for="ingredients">Add Ingredients</label>
-            <input type="text" id="ingredients" name="Ingredients">
+            <label for="descriptions">Description</label>
+            <input type="text" id="descriptions" name="descriptions">
             <label for="img">Recipe Image:</label>
             <input type="file" id="img" name="Image" accept="image/*">
-            <textarea name="descritions" id="descriptions" cols="30" rows="10" placeholder="Add your recipe description"></textarea>
-
+            <textarea name="ingredients" id="ingredients" cols="30" rows="10" placeholder="Add your recipe ingredients"></textarea>
+            <button class="button">Add Recipe</button>
         </section>
 
         <section class="recipe-card">
-
             <div class="card">
-                <h4>Recipe Name</h4>
-                <p>Recipe descriptions</p>
-                <p>Ingredients</p>
+                <img class="image" src="./Images/background.jpg" alt="dish pic">
+                <h4 class="name">Recipe Name</h4>
+                <p class="descriptions">Recipe descriptions</p>
+                <p class="ingredients">Ingredients</p>
             </div>
-
-
+            <div class="card">
+                <img class="image" src="./Images/background-image.jpg" alt="dish pic">
+                <h4 class="name">Recipe Name</h4>
+                <p class="descriptions">Recipe descriptions</p>
+                <p class="ingredients">Ingredients</p>
+            </div>
+            <div class="card">
+                <img class="image" src="./Images/background-image.jpg" alt="dish pic">
+                <h4 class="name">Recipe Name</h4>
+                <p class="descriptions">Recipe descriptions</p>
+                <p class="ingredients">Ingredients</p>
+            </div>
+            <div class="card">
+                <img class="image" src="./Images/background.jpg" alt="dish pic">
+                <h4 class="name">Recipe Name</h4>
+                <p class="descriptions">Recipe descriptions</p>
+                <p class="ingredients">Ingredients</p>
+            </div>
         </section>
 
 
