@@ -85,6 +85,20 @@ function () {
       var id = String(this.currentId); // store id also in local storage so later we can usr this id to delete 
 
       localStorage.setItem('recipeCardId', id);
+    } // for grabing the recipes from local storage
+
+  }, {
+    key: "loadRecipe",
+    value: function loadRecipe() {
+      if (localStorage.getItem('recipes')) {
+        var recipeJson = localStorage.getItem('recipes');
+        this.recipes = JSON.parse(recipeJson);
+      }
+
+      if (localStorage.getItem('recipeCardId')) {
+        var currentId = localStorage.getItem('recipeCardId');
+        this.currentId = Number(currentId);
+      }
     }
   }]);
 

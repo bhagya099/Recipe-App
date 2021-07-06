@@ -1,6 +1,10 @@
 // Instance of class
 const RecipeCard = new Recipe();
 
+// loading the data from local storage
+RecipeCard.loadRecipe();
+RecipeCard.render();
+
 // variables
 const recipeName = document.querySelector('#recipe_name');
 const descriptions = document.querySelector('#descriptions');

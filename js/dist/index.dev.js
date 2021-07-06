@@ -1,7 +1,10 @@
 "use strict";
 
 // Instance of class
-var RecipeCard = new Recipe(); // variables
+var RecipeCard = new Recipe(); // loading the data from local storage
+
+RecipeCard.loadRecipe();
+RecipeCard.render(); // variables
 
 var recipeName = document.querySelector('#recipe_name');
 var descriptions = document.querySelector('#descriptions');
