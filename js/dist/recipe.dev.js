@@ -10,7 +10,7 @@ console.log("this is class.js file"); // "${img == "" ? img.src = "../Images/bac
 // for showing every recipe card in html taking the value from FORM
 
 var createRecipe = function createRecipe(id, recipeName, descriptions, ingredients) {
-  var html = "\n   <div class=\"card\" data-id=\"".concat(id, "\">\n   \n        <img class=\"image\" src=\"../Images/background-image.jpg\" alt=\"dish pic\">\n        <h3 class=\"name\"><sapn>").concat(recipeName, "</sapn></h3>\n        <p class=\"ingredients\"> <sapn>Ingredients</sapn> <br>").concat(ingredients, "</p>\n        <p class=\"descriptions\"> <sapn>How to make</sapn> <br>").concat(descriptions, "</p>\n       <button class=\"button_card\">Delete Recipe</button>\n    </div>\n    ");
+  var html = "\n   <div class=\"card\" data-id=\"".concat(id, "\">\n   \n        <img class=\"image\" src=\"./Images/background-image.jpg\" alt=\"dish pic\">\n        <h3 class=\"name\"><sapn>").concat(recipeName, "</sapn></h3>\n        <p class=\"ingredients\"> <sapn>Ingredients</sapn> <br>").concat(ingredients, "</p>\n        <p class=\"descriptions\"> <sapn>How to make</sapn> <br>").concat(descriptions, "</p>\n       <button class=\"button_card\">Delete Recipe</button>\n    </div>\n    ");
   return html;
 };
 
