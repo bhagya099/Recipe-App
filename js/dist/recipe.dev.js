@@ -9,7 +9,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 console.log("this is class.js file"); // for showing every recipe card in html taking the value from FORM
 
 var createRecipe = function createRecipe(id, recipeName, descriptions, img, ingredients) {
-  var html = "\n   <div class=\"card\">\n        <img class=\"image\" src=".concat(img, " alt=\"dish pic\">\n        <h4 class=\"name\">").concat(recipeName, "</h4>\n        <p class=\"descriptions\">").concat(descriptions, "</p>\n        <p class=\"ingredients\">").concat(ingredients, "</p>\n        <button class=\"button_card\">Delete Recipe</button>\n    </div>\n    ");
+  var html = "\n   <div class=\"card\" data-id=\"".concat(id, "\">\n   \n        <img class=\"image\"\n        src=\"\n        ").concat(img == "" ? img.src = "../Images/background-image.jpg" : '', "\n        \" alt=\"dish pic\">\n        <h4 class=\"name\">").concat(recipeName, "</h4>\n        <p class=\"descriptions\">").concat(descriptions, "</p>\n        <p class=\"ingredients\">").concat(ingredients, "</p>\n        <button class=\"button_card\">Delete Recipe</button>\n    </div>\n    ");
   return html;
 };
 
@@ -36,7 +36,6 @@ function () {
         ingredients: ingredients
       };
       this.recipes.push(recipe);
-      console.log(this.recipes);
     } // method for showing card in html
 
   }, {
@@ -50,29 +49,29 @@ function () {
         var _recipeHtml = createRecipe(renderRecipe.id, renderRecipe.name, renderRecipe.descriptions, renderRecipe.img, renderRecipe.ingredients);
 
         recipeHtmlList.unshift(_recipeHtml);
-        console.log(recipeHtmlList);
       }
 
-      var recipeHtml = recipeHtmlList.join('\n');
-      console.log(recipeHtmlList);
+      var recipeHtml = recipeHtmlList.join('\n'); // grabing the dispaycard secion for displaying the cards
+
       var recipeList = document.getElementById('displayRecipes');
       recipeList.innerHTML = recipeHtml;
     } //  for getting the recipe by it's unique id in card
 
   }, {
-    key: "getRecideByID",
-    value: function getRecideByID(recipeId) {
-      var foundRecipe;
+    key: "deleteCard",
+    value: function deleteCard(recipeId) {
+      var newRecipe = [];
 
       for (var i = 0; i < this.recipes.length; i++) {
         var getRecipe = this.recipes[i];
 
-        if (getRecipe.id === recipeId) {
-          foundRecipe = getRecipe;
+        if (getRecipe.id !== recipeId) {
+          newRecipe.push(getRecipe);
+          console.log(newRecipe);
         }
       }
 
-      return foundRecipe;
+      this.recipes = newRecipe;
     }
   }]);
 
