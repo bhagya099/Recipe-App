@@ -32,7 +32,8 @@
      transform: rotate(10deg);
  }
  
- .button {
+ .button,
+ .button_card {
      padding: 12px;
      margin: 10px 20px;
      border: 1px;
@@ -112,6 +113,11 @@
  .card:hover {
      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
      transform: translate(2px, 3px);
+ }
+ 
+ .button_card:hover {
+     background-color: rgba(177, 12, 48, 0.515);
+     transform: scale(0.9);
  }
  
  .name,
