@@ -1,5 +1,3 @@
-console.log("this is class.js file");
-// "${img == "" ? img.src = "../Images/background-image.jpg" : ''}"
 // for showing every recipe card in html taking the value from FORM
 const createRecipe = (id, recipeName, descriptions, ingredients) => {
     const html = `
@@ -56,7 +54,6 @@ class Recipe {
             let getRecipe = this.recipes[i];
             if (getRecipe.id !== recipeId) {
                 newRecipe.push(getRecipe);
-                console.log(newRecipe);
             }
         }
         this.recipes = newRecipe;

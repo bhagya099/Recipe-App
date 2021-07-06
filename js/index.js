@@ -49,10 +49,8 @@ displayRecipes.addEventListener('click', (event) => {
     if (event.target.classList.contains("button_card")) {
         // finding the main parenet element of button
         let parentCard = event.target.parentElement;
-        console.log(parentCard);
         // conver the ID in to number 
         let recipeCardID = Number(parentCard.dataset.id);
-        console.log(recipeCardID);
         // calling the delete method from class recipe
         RecipeCard.deleteCard(recipeCardID);
         RecipeCard.saveRecipe();
