@@ -31,6 +31,7 @@ const addRecipe = () => {
             recipeIngredients.value
         );
         RecipeCard.render();
+        RecipeCard.saveRecipe();
         clearForm();
     }
 }

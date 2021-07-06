@@ -26,6 +26,7 @@ var addRecipe = function addRecipe() {
     console.log("Hello");
     RecipeCard.add(recipeName.value, descriptions.value, recipeImg.value, recipeIngredients.value);
     RecipeCard.render();
+    RecipeCard.saveRecipe();
     clearForm();
   }
 }; // adding click event listner in add recipe button

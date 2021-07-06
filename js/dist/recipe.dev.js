@@ -72,6 +72,19 @@ function () {
       }
 
       this.recipes = newRecipe;
+    } // for saving the recipes in local storage 
+
+  }, {
+    key: "saveRecipe",
+    value: function saveRecipe() {
+      // create json stringfy for saving in local storage
+      var recipeJson = JSON.stringify(this.recipes); // using localstorage setitme method to save in local storage
+
+      localStorage.setItem('recipes', recipeJson); // conver id itno string
+
+      var id = String(this.currentId); // store id also in local storage so later we can usr this id to delete 
+
+      localStorage.setItem('recipeCardId', id);
     }
   }]);
 
