@@ -30,7 +30,6 @@ const addRecipe = () => {
         console.log("Hello");
         RecipeCard.add(recipeName.value,
             descriptions.value,
-            // recipeImg,
             recipeIngredients.value
         );
         RecipeCard.render();
