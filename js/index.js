@@ -56,6 +56,7 @@ displayRecipes.addEventListener('click', (event) => {
         console.log(recipeCardID);
         // calling the delete method from class recipe
         RecipeCard.deleteCard(recipeCardID);
+        RecipeCard.saveRecipe();
         RecipeCard.render();
     }
 });
