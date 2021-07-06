@@ -4,8 +4,6 @@ console.log("this is class.js file");
 const createRecipe = (id, recipeName, descriptions, ingredients) => {
     const html = `
    <div class="card" data-id="${id}">
-   
-        <img class="image" src="./images/background-image.jpg" alt="dish pic">
         <h3 class="name"><sapn>${recipeName}</sapn></h3>
         <p class="ingredients"> <sapn>Ingredients</sapn> <br>${ingredients}</p>
         <p class="descriptions"> <sapn>How to make</sapn> <br>${descriptions}</p>
