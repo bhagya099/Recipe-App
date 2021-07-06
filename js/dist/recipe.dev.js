@@ -9,7 +9,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 console.log("this is class.js file"); // for showing every recipe card in html taking the value from FORM
 
 var createRecipe = function createRecipe(id, recipeName, descriptions, img, ingredients) {
-  var html = "\n   <div class=\"card\" data-id=\"".concat(id, "\">\n   \n        <img class=\"image\"\n        src=\"\n        ").concat(img == "" ? img.src = "../Images/background-image.jpg" : '', "\n        \" alt=\"dish pic\">\n        <h4 class=\"name\">").concat(recipeName, "</h4>\n        <p class=\"descriptions\">").concat(descriptions, "</p>\n        <p class=\"ingredients\">").concat(ingredients, "</p>\n        <button class=\"button_card\">Delete Recipe</button>\n    </div>\n    ");
+  var html = "\n   <div class=\"card\" data-id=\"".concat(id, "\">\n   \n        <img class=\"image\"\n        src=\"\n        ").concat(img == "" ? img.src = "../Images/background-image.jpg" : '', "\n        \" alt=\"dish pic\">\n        <h3 class=\"name\"><sapn>").concat(recipeName, "</sapn></h3>\n        <p class=\"ingredients\"> <sapn>Ingredients</sapn> <br>").concat(ingredients, "</p>\n        <p class=\"descriptions\"> <sapn>How to make</sapn> <br>").concat(descriptions, "</p>\n       <button class=\"button_card\">Delete Recipe</button>\n    </div>\n    ");
   return html;
 };
 

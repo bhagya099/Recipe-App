@@ -8,10 +8,10 @@ const createRecipe = (id, recipeName, descriptions, img, ingredients) => {
         src="
         ${img == "" ? img.src = "../Images/background-image.jpg" : ''}
         " alt="dish pic">
-        <h4 class="name">${recipeName}</h4>
-        <p class="descriptions">${descriptions}</p>
-        <p class="ingredients">${ingredients}</p>
-        <button class="button_card">Delete Recipe</button>
+        <h3 class="name"><sapn>${recipeName}</sapn></h3>
+        <p class="ingredients"> <sapn>Ingredients</sapn> <br>${ingredients}</p>
+        <p class="descriptions"> <sapn>How to make</sapn> <br>${descriptions}</p>
+       <button class="button_card">Delete Recipe</button>
     </div>
     `;
     return html;
