@@ -1,13 +1,11 @@
 console.log("this is class.js file");
+// "${img == "" ? img.src = "../Images/background-image.jpg" : ''}"
 // for showing every recipe card in html taking the value from FORM
-const createRecipe = (id, recipeName, descriptions, img, ingredients) => {
+const createRecipe = (id, recipeName, descriptions, ingredients) => {
     const html = `
    <div class="card" data-id="${id}">
    
-        <img class="image"
-        src="
-        ${img == "" ? img.src = "../Images/background-image.jpg" : ''}
-        " alt="dish pic">
+        <img class="image" src="../Images/background-image.jpg" alt="dish pic">
         <h3 class="name"><sapn>${recipeName}</sapn></h3>
         <p class="ingredients"> <sapn>Ingredients</sapn> <br>${ingredients}</p>
         <p class="descriptions"> <sapn>How to make</sapn> <br>${descriptions}</p>
@@ -22,12 +20,11 @@ class Recipe {
         this.currentId = currentId;
         this.recipes = []
     }
-    add(name, descriptions, img, ingredients) {
+    add(name, descriptions, ingredients) {
         const recipe = {
             id: this.currentId++,
             name: name,
             descriptions: descriptions,
-            img: img,
             ingredients: ingredients
         };
         this.recipes.push(recipe);
@@ -42,7 +39,6 @@ class Recipe {
                 renderRecipe.id,
                 renderRecipe.name,
                 renderRecipe.descriptions,
-                renderRecipe.img,
                 renderRecipe.ingredients
             );
             recipeHtmlList.unshift(recipeHtml);

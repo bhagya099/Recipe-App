@@ -8,16 +8,15 @@ RecipeCard.render();
 // variables
 const recipeName = document.querySelector('#recipe_name');
 const descriptions = document.querySelector('#descriptions');
-const recipeImg = document.querySelector('#img');
 const recipeIngredients = document.querySelector('#ingredients');
 const addButton = document.querySelector('.button')
 const displayRecipes = document.getElementById('displayRecipes');
+
 
 // clearing the form after adding the recipes
 const clearForm = () => {
     recipeName.value = "";
     descriptions.value = "";
-    recipeImg.value = "";
     recipeIngredients.value = "";
 }
 
@@ -25,13 +24,13 @@ const clearForm = () => {
 // function for adding recipe
 const addRecipe = () => {
     // checking the inout field
-    if (recipeName.value == "" || descriptions.value == " " || recipeImg.value == " " || recipeIngredients.value == "") {
+    if (recipeName.value == "" || descriptions.value == " " || recipeIngredients.value == "") {
         alert("please fill all the details in form")
     } else {
         console.log("Hello");
         RecipeCard.add(recipeName.value,
             descriptions.value,
-            recipeImg.value,
+            // recipeImg,
             recipeIngredients.value
         );
         RecipeCard.render();

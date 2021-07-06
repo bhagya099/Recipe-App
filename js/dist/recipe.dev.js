@@ -6,10 +6,11 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-console.log("this is class.js file"); // for showing every recipe card in html taking the value from FORM
+console.log("this is class.js file"); // "${img == "" ? img.src = "../Images/background-image.jpg" : ''}"
+// for showing every recipe card in html taking the value from FORM
 
-var createRecipe = function createRecipe(id, recipeName, descriptions, img, ingredients) {
-  var html = "\n   <div class=\"card\" data-id=\"".concat(id, "\">\n   \n        <img class=\"image\"\n        src=\"\n        ").concat(img == "" ? img.src = "../Images/background-image.jpg" : '', "\n        \" alt=\"dish pic\">\n        <h3 class=\"name\"><sapn>").concat(recipeName, "</sapn></h3>\n        <p class=\"ingredients\"> <sapn>Ingredients</sapn> <br>").concat(ingredients, "</p>\n        <p class=\"descriptions\"> <sapn>How to make</sapn> <br>").concat(descriptions, "</p>\n       <button class=\"button_card\">Delete Recipe</button>\n    </div>\n    ");
+var createRecipe = function createRecipe(id, recipeName, descriptions, ingredients) {
+  var html = "\n   <div class=\"card\" data-id=\"".concat(id, "\">\n   \n        <img class=\"image\" src=\"../Images/background-image.jpg\" alt=\"dish pic\">\n        <h3 class=\"name\"><sapn>").concat(recipeName, "</sapn></h3>\n        <p class=\"ingredients\"> <sapn>Ingredients</sapn> <br>").concat(ingredients, "</p>\n        <p class=\"descriptions\"> <sapn>How to make</sapn> <br>").concat(descriptions, "</p>\n       <button class=\"button_card\">Delete Recipe</button>\n    </div>\n    ");
   return html;
 };
 
@@ -27,12 +28,11 @@ function () {
 
   _createClass(Recipe, [{
     key: "add",
-    value: function add(name, descriptions, img, ingredients) {
+    value: function add(name, descriptions, ingredients) {
       var recipe = {
         id: this.currentId++,
         name: name,
         descriptions: descriptions,
-        img: img,
         ingredients: ingredients
       };
       this.recipes.push(recipe);
@@ -46,7 +46,7 @@ function () {
       for (var i = 0; i < this.recipes.length; i++) {
         var renderRecipe = this.recipes[i];
 
-        var _recipeHtml = createRecipe(renderRecipe.id, renderRecipe.name, renderRecipe.descriptions, renderRecipe.img, renderRecipe.ingredients);
+        var _recipeHtml = createRecipe(renderRecipe.id, renderRecipe.name, renderRecipe.descriptions, renderRecipe.ingredients);
 
         recipeHtmlList.unshift(_recipeHtml);
       }
