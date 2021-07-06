@@ -1,5 +1,5 @@
 # Recipe-App
-I made a APP where you can share you awesome food recipe with others.
+I made a APP where you can save you awesome food recipe for future.
 
 For making this APP I use HTML/CSS/Vanilla JS.
 
